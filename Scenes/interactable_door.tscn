@@ -122,7 +122,7 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_nfru3"]
 size = Vector3(1.99741, 2.22073, 1.63977)
 
-[node name="DoorV2" type="Node3D"]
+[node name="Door" type="Node3D"]
 script = ExtResource("1_27ynq")
 
 [node name="Door_Frame_mesh" type="MeshInstance3D" parent="."]
