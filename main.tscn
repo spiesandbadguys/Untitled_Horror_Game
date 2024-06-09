@@ -308,7 +308,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 skeleton = NodePath("../..")
 
 [node name="door" parent="doorContainer/DoorV6/Door_Pivot/Door_Mesh" instance=ExtResource("6_stcpo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0169328)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.016933)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="doorContainer/DoorV6"]
 libraries = {

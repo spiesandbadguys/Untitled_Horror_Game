@@ -21,9 +21,9 @@ func _process(delta):
 func _on_interact_area_body_entered(body):
 	if body.is_in_group("Player"):
 		isIn = true
-		print("door true")
+		# print("door true")
 
 func _on_interact_area_body_exited(body):
 	if body.is_in_group("Player"):
 		isIn = false
-		print("door false")
+		# print("door false")
