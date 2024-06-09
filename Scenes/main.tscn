@@ -5,7 +5,7 @@
 [ext_resource type="Script" path="res://Scripts/door_area.gd" id="3_n16ma"]
 [ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door/door_frame.blend" id="4_unekf"]
 [ext_resource type="PackedScene" uid="uid://b6vpmkknd3egg" path="res://Models/door/Door.blend" id="5_neieb"]
-[ext_resource type="PackedScene" uid="uid://cfqrq2f4bagfa" path="res://Scenes/Key_Gold.tscn" id="6_x7drs"]
+[ext_resource type="PackedScene" uid="uid://chhxanghpm0hh" path="res://Scenes/Key_Gold.tscn" id="6_x7drs"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4kpu4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -15,9 +15,9 @@ ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 sky_material = SubResource("ProceduralSkyMaterial_4kpu4")
 
 [sub_resource type="Environment" id="Environment_g2dey"]
-background_mode = 2
+background_energy_multiplier = 1.08
 sky = SubResource("Sky_r30ec")
-tonemap_mode = 2
+sky_custom_fov = 29.1
 glow_enabled = true
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lnfis"]
