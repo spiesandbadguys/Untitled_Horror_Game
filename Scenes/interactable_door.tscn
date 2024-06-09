@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://d02bqyrtbfhhy"]
 
-[ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door_frame.blend" id="1_4nq0i"]
-[ext_resource type="Script" path="res://Scenes/door_v_2.gd" id="1_5jasb"]
-[ext_resource type="PackedScene" uid="uid://b6vpmkknd3egg" path="res://Models/Door.blend" id="2_xqmy6"]
+[ext_resource type="Script" path="res://Scripts/door_area.gd" id="1_27ynq"]
+[ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door_frame.blend" id="2_afmmy"]
+[ext_resource type="PackedScene" uid="uid://b6vpmkknd3egg" path="res://Models/Door.blend" id="3_8a3kp"]
 
 [sub_resource type="Animation" id="Animation_hi84v"]
 resource_name = "Close_Door"
@@ -123,19 +123,19 @@ _data = {
 size = Vector3(1.99741, 2.22073, 1.63977)
 
 [node name="DoorV2" type="Node3D"]
-script = ExtResource("1_5jasb")
+script = ExtResource("1_27ynq")
 
 [node name="Door_Frame_mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 
-[node name="door_frame" parent="Door_Frame_mesh" instance=ExtResource("1_4nq0i")]
+[node name="door_frame" parent="Door_Frame_mesh" instance=ExtResource("2_afmmy")]
 
 [node name="Door_Pivot" type="Node3D" parent="."]
 
 [node name="Door_Mesh" type="MeshInstance3D" parent="Door_Pivot"]
 skeleton = NodePath("../..")
 
-[node name="door" parent="Door_Pivot/Door_Mesh" instance=ExtResource("2_xqmy6")]
+[node name="door" parent="Door_Pivot/Door_Mesh" instance=ExtResource("3_8a3kp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0169328)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
