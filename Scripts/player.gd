@@ -103,3 +103,10 @@ func _crouch() -> Vector3:
 func addKey():
 	keyCount+=1
 	print(keyCount)
+
+func takeKey():
+	keyCount-=1
+	print(keyCount)
+
+func getKeyCount():
+	return keyCount

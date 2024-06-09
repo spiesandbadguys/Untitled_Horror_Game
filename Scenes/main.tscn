@@ -1,11 +1,12 @@
-[gd_scene load_steps=20 format=3 uid="uid://bxnth7p5od8ht"]
+[gd_scene load_steps=21 format=3 uid="uid://bxnth7p5od8ht"]
 
 [ext_resource type="PackedScene" uid="uid://dnn5qyjk8kgfd" path="res://Scenes/player.tscn" id="1_ftwqa"]
 [ext_resource type="Texture2D" uid="uid://b6h7vu7rf7ib4" path="res://Textures/tex_dirt.jpg" id="2_4s704"]
 [ext_resource type="Script" path="res://Scripts/door_area.gd" id="3_n16ma"]
 [ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door/door_frame.blend" id="4_unekf"]
 [ext_resource type="PackedScene" uid="uid://b6vpmkknd3egg" path="res://Models/door/Door.blend" id="5_neieb"]
-[ext_resource type="PackedScene" uid="uid://chhxanghpm0hh" path="res://Scenes/Key_Gold.tscn" id="6_x7drs"]
+[ext_resource type="PackedScene" uid="uid://cfqrq2f4bagfa" path="res://Scenes/Key_Gold.tscn" id="6_x7drs"]
+[ext_resource type="PackedScene" uid="uid://btr1eyyufdb1b" path="res://Scenes/Locked_Door.tscn" id="7_wrusy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4kpu4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -322,6 +323,12 @@ libraries = {
 [node name="Collision_Detection" type="CollisionShape3D" parent="doorContainer/DoorV6/Interact_Area"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00361633, 1.11723, -0.717224)
 shape = SubResource("BoxShape3D_nfru3")
+
+[node name="Locked_door" parent="doorContainer" instance=ExtResource("7_wrusy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35989, -0.00699258, 14.6296)
+
+[node name="Locked_door2" parent="doorContainer" instance=ExtResource("7_wrusy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.36582, -0.0069921, 16.9887)
 
 [node name="boxContainer" type="Node3D" parent="."]
 

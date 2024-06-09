@@ -1,6 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://dkjqpqvyj7jtn"]
+[gd_scene load_steps=9 format=3 uid="uid://btr1eyyufdb1b"]
 
-[ext_resource type="Script" path="res://Scripts/door_area.gd" id="1_bxxse"]
+[ext_resource type="Script" path="res://Scripts/locked_door.gd" id="1_g1jdu"]
 [ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door/door_frame.blend" id="2_ks4ei"]
 [ext_resource type="PackedScene" uid="uid://dpqf223k2yftv" path="res://Models/Locked_Door/Door_Locked.blend" id="3_jdg0v"]
 
@@ -122,8 +122,8 @@ _data = {
 [sub_resource type="BoxShape3D" id="BoxShape3D_nfru3"]
 size = Vector3(1.99741, 2.22073, 1.63977)
 
-[node name="DoorV2" type="Node3D"]
-script = ExtResource("1_bxxse")
+[node name="Locked_door" type="Node3D"]
+script = ExtResource("1_g1jdu")
 
 [node name="Door_Frame_mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
