@@ -1,10 +1,10 @@
 [gd_scene load_steps=19 format=3 uid="uid://bxnth7p5od8ht"]
 
-[ext_resource type="PackedScene" uid="uid://dnn5qyjk8kgfd" path="res://Scenes/player.tscn" id="1_t7i3k"]
-[ext_resource type="Texture2D" uid="uid://b6h7vu7rf7ib4" path="res://Textures/tex_dirt.jpg" id="2_0o7ur"]
-[ext_resource type="Script" path="res://Scripts/door_area.gd" id="3_cvln1"]
-[ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door/door_frame.blend" id="4_sy2sx"]
-[ext_resource type="PackedScene" uid="uid://b6vpmkknd3egg" path="res://Models/door/Door.blend" id="6_stcpo"]
+[ext_resource type="PackedScene" uid="uid://dnn5qyjk8kgfd" path="res://Scenes/player.tscn" id="1_ftwqa"]
+[ext_resource type="Texture2D" uid="uid://b6h7vu7rf7ib4" path="res://Textures/tex_dirt.jpg" id="2_4s704"]
+[ext_resource type="Script" path="res://Scripts/door_area.gd" id="3_n16ma"]
+[ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door/door_frame.blend" id="4_unekf"]
+[ext_resource type="PackedScene" uid="uid://b6vpmkknd3egg" path="res://Models/door/Door.blend" id="5_neieb"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4kpu4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -26,7 +26,7 @@ size = Vector3(100, 1, 100)
 size = Vector3(10, 1, 10)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nrcxy"]
-albedo_texture = ExtResource("2_0o7ur")
+albedo_texture = ExtResource("2_4s704")
 uv1_scale = Vector3(0.05, 0.05, 0.05)
 uv1_triplanar = true
 uv1_world_triplanar = true
@@ -160,7 +160,7 @@ size = Vector3(1.99741, 2.22073, 1.63977)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_g2dey")
 
-[node name="Player" parent="." instance=ExtResource("1_t7i3k")]
+[node name="Player" parent="." instance=ExtResource("1_ftwqa")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 3.80475)
 
 [node name="Ground" type="StaticBody3D" parent="."]
@@ -179,19 +179,19 @@ surface_material_override/0 = SubResource("StandardMaterial3D_nrcxy")
 [node name="DoorV2" type="Node3D" parent="doorContainer"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14079, -0.000127494, 11.8362)
-script = ExtResource("3_cvln1")
+script = ExtResource("3_n16ma")
 
 [node name="Door_Frame_mesh" type="MeshInstance3D" parent="doorContainer/DoorV2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 
-[node name="door_frame" parent="doorContainer/DoorV2/Door_Frame_mesh" instance=ExtResource("4_sy2sx")]
+[node name="door_frame" parent="doorContainer/DoorV2/Door_Frame_mesh" instance=ExtResource("4_unekf")]
 
 [node name="Door_Pivot" type="Node3D" parent="doorContainer/DoorV2"]
 
 [node name="Door_Mesh" type="MeshInstance3D" parent="doorContainer/DoorV2/Door_Pivot"]
 skeleton = NodePath("../..")
 
-[node name="door" parent="doorContainer/DoorV2/Door_Pivot/Door_Mesh" instance=ExtResource("6_stcpo")]
+[node name="door" parent="doorContainer/DoorV2/Door_Pivot/Door_Mesh" instance=ExtResource("5_neieb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0169328)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="doorContainer/DoorV2"]
@@ -208,19 +208,19 @@ shape = SubResource("BoxShape3D_nfru3")
 [node name="DoorV3" type="Node3D" parent="doorContainer"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14079, -0.000127494, 8.42705)
-script = ExtResource("3_cvln1")
+script = ExtResource("3_n16ma")
 
 [node name="Door_Frame_mesh" type="MeshInstance3D" parent="doorContainer/DoorV3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 
-[node name="door_frame" parent="doorContainer/DoorV3/Door_Frame_mesh" instance=ExtResource("4_sy2sx")]
+[node name="door_frame" parent="doorContainer/DoorV3/Door_Frame_mesh" instance=ExtResource("4_unekf")]
 
 [node name="Door_Pivot" type="Node3D" parent="doorContainer/DoorV3"]
 
 [node name="Door_Mesh" type="MeshInstance3D" parent="doorContainer/DoorV3/Door_Pivot"]
 skeleton = NodePath("../..")
 
-[node name="door" parent="doorContainer/DoorV3/Door_Pivot/Door_Mesh" instance=ExtResource("6_stcpo")]
+[node name="door" parent="doorContainer/DoorV3/Door_Pivot/Door_Mesh" instance=ExtResource("5_neieb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0169328)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="doorContainer/DoorV3"]
@@ -237,19 +237,19 @@ shape = SubResource("BoxShape3D_nfru3")
 [node name="DoorV4" type="Node3D" parent="doorContainer"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14079, -0.000127494, 4.71929)
-script = ExtResource("3_cvln1")
+script = ExtResource("3_n16ma")
 
 [node name="Door_Frame_mesh" type="MeshInstance3D" parent="doorContainer/DoorV4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 
-[node name="door_frame" parent="doorContainer/DoorV4/Door_Frame_mesh" instance=ExtResource("4_sy2sx")]
+[node name="door_frame" parent="doorContainer/DoorV4/Door_Frame_mesh" instance=ExtResource("4_unekf")]
 
 [node name="Door_Pivot" type="Node3D" parent="doorContainer/DoorV4"]
 
 [node name="Door_Mesh" type="MeshInstance3D" parent="doorContainer/DoorV4/Door_Pivot"]
 skeleton = NodePath("../..")
 
-[node name="door" parent="doorContainer/DoorV4/Door_Pivot/Door_Mesh" instance=ExtResource("6_stcpo")]
+[node name="door" parent="doorContainer/DoorV4/Door_Pivot/Door_Mesh" instance=ExtResource("5_neieb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0169328)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="doorContainer/DoorV4"]
@@ -266,19 +266,19 @@ shape = SubResource("BoxShape3D_nfru3")
 [node name="DoorV5" type="Node3D" parent="doorContainer"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14079, -0.000127494, 1.2562)
-script = ExtResource("3_cvln1")
+script = ExtResource("3_n16ma")
 
 [node name="Door_Frame_mesh" type="MeshInstance3D" parent="doorContainer/DoorV5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 
-[node name="door_frame" parent="doorContainer/DoorV5/Door_Frame_mesh" instance=ExtResource("4_sy2sx")]
+[node name="door_frame" parent="doorContainer/DoorV5/Door_Frame_mesh" instance=ExtResource("4_unekf")]
 
 [node name="Door_Pivot" type="Node3D" parent="doorContainer/DoorV5"]
 
 [node name="Door_Mesh" type="MeshInstance3D" parent="doorContainer/DoorV5/Door_Pivot"]
 skeleton = NodePath("../..")
 
-[node name="door" parent="doorContainer/DoorV5/Door_Pivot/Door_Mesh" instance=ExtResource("6_stcpo")]
+[node name="door" parent="doorContainer/DoorV5/Door_Pivot/Door_Mesh" instance=ExtResource("5_neieb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0169328)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="doorContainer/DoorV5"]
@@ -295,19 +295,19 @@ shape = SubResource("BoxShape3D_nfru3")
 [node name="DoorV6" type="Node3D" parent="doorContainer"]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.14079, -0.000127494, -1.63643)
-script = ExtResource("3_cvln1")
+script = ExtResource("3_n16ma")
 
 [node name="Door_Frame_mesh" type="MeshInstance3D" parent="doorContainer/DoorV6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.1)
 
-[node name="door_frame" parent="doorContainer/DoorV6/Door_Frame_mesh" instance=ExtResource("4_sy2sx")]
+[node name="door_frame" parent="doorContainer/DoorV6/Door_Frame_mesh" instance=ExtResource("4_unekf")]
 
 [node name="Door_Pivot" type="Node3D" parent="doorContainer/DoorV6"]
 
 [node name="Door_Mesh" type="MeshInstance3D" parent="doorContainer/DoorV6/Door_Pivot"]
 skeleton = NodePath("../..")
 
-[node name="door" parent="doorContainer/DoorV6/Door_Pivot/Door_Mesh" instance=ExtResource("6_stcpo")]
+[node name="door" parent="doorContainer/DoorV6/Door_Pivot/Door_Mesh" instance=ExtResource("5_neieb")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.016933)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="doorContainer/DoorV6"]
