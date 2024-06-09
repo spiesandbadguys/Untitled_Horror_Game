@@ -10,7 +10,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	if isIn and Input.is_action_just_pressed("interact") and not isOpen and %Player.getKeyCount() > 0 and not isUnlocked:
 		$AnimationPlayer.play("Open_Door")
 		isOpen = true
