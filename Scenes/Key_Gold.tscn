@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://chhxanghpm0hh"]
+
+[ext_resource type="PackedScene" uid="uid://jlqve67vd25c" path="res://Models/key/Key_Gold.blend" id="1_boucm"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fby21"]
+albedo_color = Color(0.907249, 0.773833, 0, 1)
+metallic = 0.78
+clearcoat_enabled = true
+
+[node name="Key_Gold" instance=ExtResource("1_boucm")]
+
+[node name="Cube" parent="." index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_fby21")
