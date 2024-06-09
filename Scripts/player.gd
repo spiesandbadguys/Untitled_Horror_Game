@@ -2,6 +2,7 @@ extends CharacterBody3D
 
 #base function variables
 var speed = 0
+var keyCount = 0
 @export var walkSpeed = 5
 @export var runSpeed = 8
 @export var gravity = 9.8
@@ -98,3 +99,7 @@ func _crouch() -> Vector3:
 	pos.y = -1 * bobAmp
 	pos.x = pos.y
 	return pos
+
+func addKey():
+	keyCount+=1
+	print(keyCount)
