@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dnn5qyjk8kgfd"]
+[gd_scene load_steps=5 format=3 uid="uid://dnn5qyjk8kgfd"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_c6agn"]
+[ext_resource type="PackedScene" uid="uid://doa3tkb8o7nu1" path="res://Scenes/Flashlight.tscn" id="2_jf2sc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1qpsn"]
 
@@ -16,6 +17,9 @@ script = ExtResource("1_c6agn")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564989, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Pivot/Head"]
+
+[node name="Flashlight" parent="Pivot/Head/Camera3D" instance=ExtResource("2_jf2sc")]
+transform = Transform3D(0.0234028, 0, -0.999726, 0, 1, 0, 0.999726, 0, 0.0234028, 0.3375, -0.323614, -0.47248)
 
 [node name="Player_Body" type="MeshInstance3D" parent="Pivot"]
 mesh = SubResource("CapsuleMesh_1qpsn")

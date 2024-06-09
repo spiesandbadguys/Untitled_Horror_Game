@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://doa3tkb8o7nu1"]
+
+[ext_resource type="PackedScene" uid="uid://cpq0l51rm6xog" path="res://Models/Flashlight/Flashlight.blend" id="1_nmcvg"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_3nrgj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_q03oa"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy_multiplier = 2.55
+
+[node name="Flashlight" instance=ExtResource("1_nmcvg")]
+
+[node name="Emmisive_Glass" type="MeshInstance3D" parent="Cylinder" index="0"]
+transform = Transform3D(0.175, 0, 0, 0, 0.001, 0, 0, 0, 0.175, 0, 0.210601, 0)
+mesh = SubResource("CylinderMesh_3nrgj")
+surface_material_override/0 = SubResource("StandardMaterial3D_q03oa")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="1"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.120812, 0, 0)
+light_energy = 0.5
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="." index="2"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.120812, 0, 0)
+spot_angle = 15.9324
