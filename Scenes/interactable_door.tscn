@@ -1,8 +1,8 @@
 [gd_scene load_steps=9 format=3 uid="uid://d02bqyrtbfhhy"]
 
 [ext_resource type="Script" path="res://Scripts/door_area.gd" id="1_27ynq"]
-[ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door_frame.blend" id="2_afmmy"]
-[ext_resource type="PackedScene" uid="uid://b6vpmkknd3egg" path="res://Models/Door.blend" id="3_8a3kp"]
+[ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door/door_frame.blend" id="2_afmmy"]
+[ext_resource type="PackedScene" uid="uid://b6vpmkknd3egg" path="res://Models/door/Door.blend" id="3_8a3kp"]
 
 [sub_resource type="Animation" id="Animation_hi84v"]
 resource_name = "Close_Door"
