@@ -11,11 +11,12 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if isIn and Input.is_action_just_pressed("interact") and not isOpen:
-		$AnimationPlayer.play("Open_Door")
+		# $AnimationPlayer.play("Open_Door")
+		$DoorV2.play("Open_Door")
 		isOpen = true
 	
 	elif isIn and Input.is_action_just_pressed("interact") and isOpen:
-		$AnimationPlayer.play("Close_Door")
+		# $AnimationPlayer.play("Close_Door")
 		isOpen = false
 
 func _on_interact_area_body_entered(body):
