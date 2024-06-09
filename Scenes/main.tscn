@@ -1,7 +1,7 @@
 [gd_scene load_steps=19 format=3 uid="uid://bxnth7p5od8ht"]
 
 [ext_resource type="PackedScene" uid="uid://dnn5qyjk8kgfd" path="res://Scenes/player.tscn" id="1_t7i3k"]
-[ext_resource type="Texture2D" uid="uid://b6h7vu7rf7ib4" path="res://tex_dirt.jpg" id="2_0o7ur"]
+[ext_resource type="Texture2D" uid="uid://b6h7vu7rf7ib4" path="res://Textures/tex_dirt.jpg" id="2_0o7ur"]
 [ext_resource type="Script" path="res://Scripts/door_area.gd" id="3_cvln1"]
 [ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door/door_frame.blend" id="4_sy2sx"]
 [ext_resource type="PackedScene" uid="uid://b6vpmkknd3egg" path="res://Models/door/Door.blend" id="6_stcpo"]
