@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Scripts/locked_door.gd" id="1_g1jdu"]
 [ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door/door_frame.blend" id="2_ks4ei"]
-[ext_resource type="PackedScene" uid="uid://q5wbakedd2xb" path="res://Models/Locked_Door/Door_Locked.blend" id="3_jdg0v"]
+[ext_resource type="PackedScene" uid="uid://cdjovvobejw1u" path="res://Models/Locked_Door/Door_Locked.blend" id="3_jdg0v"]
 
 [sub_resource type="Animation" id="Animation_hi84v"]
 resource_name = "Close_Door"
