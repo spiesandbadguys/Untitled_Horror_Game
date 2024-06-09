@@ -1,8 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://btr1eyyufdb1b"]
+[gd_scene load_steps=9 format=3 uid="uid://dkjqpqvyj7jtn"]
 
 [ext_resource type="Script" path="res://Scripts/locked_door.gd" id="1_g1jdu"]
 [ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door/door_frame.blend" id="2_ks4ei"]
-[ext_resource type="PackedScene" uid="uid://dpqf223k2yftv" path="res://Models/Locked_Door/Door_Locked.blend" id="3_jdg0v"]
+[ext_resource type="PackedScene" uid="uid://q5wbakedd2xb" path="res://Models/Locked_Door/Door_Locked.blend" id="3_jdg0v"]
 
 [sub_resource type="Animation" id="Animation_hi84v"]
 resource_name = "Close_Door"
@@ -137,7 +137,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000354767, -0.0297236, -0.0
 skeleton = NodePath("../..")
 
 [node name="Door_Locked2" parent="Door_Pivot/Door_Mesh" instance=ExtResource("3_jdg0v")]
-transform = Transform3D(-4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0.00669877, 0.0271068, 0.0195464)
+transform = Transform3D(1, 1.06581e-14, 0, -1.06581e-14, 1, 0, 0, 0, 1, 0.00669877, 0.0271068, 0.0195464)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

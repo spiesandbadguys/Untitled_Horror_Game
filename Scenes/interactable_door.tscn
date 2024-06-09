@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://d02bqyrtbfhhy"]
+[gd_scene load_steps=9 format=3 uid="uid://diujn31xu3v1b"]
 
 [ext_resource type="Script" path="res://Scripts/door_area.gd" id="1_27ynq"]
 [ext_resource type="PackedScene" uid="uid://cwkk0qe1bi2ik" path="res://Models/door/door_frame.blend" id="2_afmmy"]
