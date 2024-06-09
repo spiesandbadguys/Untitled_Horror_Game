@@ -1,0 +1,86 @@
+UHG V001 6-9-2024
+
+Working
+
+Door functions
+-open and close door with animation
+-locked doors and key with limited uses 
+
+character controller
+-flashlight attatched to player camera
+
+Bugs:
+-collision with door causes player to become stuck
+	-issue with .blend _colonly method, try creating collision in godot.
+
+ToDo
+
+Player
+-footstep sounds
+
+Door
+-sound open, sound close
+
+Flashight
+-on off
+-pickup
+-equip
+-batter
+-clicky flash sounds
+
+ui elementes
+-inventory
+-hud
+-health
+-stamina
+-crosshair
+-ui open sound
+
+gun/ammo
+-models
+	-pistol
+	-9mm
+	-animation for slide and recoil
+	-reload
+	-sound shot, sount reload, sound empty
+
+-raycasting detection
+	-detect hit on object/enemy
+	-add decal on surface of hit material
+	-blood splash
+
+enemy dumby
+-static enemy to test
+-health
+-enemy spawner
+-kill
+-sound effects hit, scream, die
+
+Textures:
+-animated textures
+	-water
+
+-static textures
+ -wood
+ -key
+ -ground
+ -
+
+THEME IDEAS
+-abandoned mall that gets more demonic as you go higher in the floors
+-procedural generation
+-rouglite
+-start on lower floor and travel to each floor as a new level of difficulty
+-loot system for crafting better components
+	-locked better components behind higher levels to force progression
+	-junk >>>> demonic/Holy
+
+-hardcore brutal combat
+	-punishing melee with heavy animations, disorientation, staggering, perrying
+	-visceral gunfights with imperfect aiming, dust blooms on impact thatfill room with smoke
+	 supersonic cracks and realistic enemy reactions to pain
+
+
+
+
+
