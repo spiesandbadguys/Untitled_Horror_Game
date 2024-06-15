@@ -3,17 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-<<<<<<< Updated upstream
-uid="uid://27k3mone5wec"
-=======
-uid="uid://cgeie04xocu0o"
->>>>>>> Stashed changes
-path="res://.godot/imported/9mm_Box.glb-9d1be7eb5ecec4152eefaf86b645476f.scn"
+uid="uid://4xntjadlsdw5"
+path="res://.godot/imported/9mmbox.glb-61582a11e650b4eea1c36418707ac25c.scn"
 
 [deps]
 
-source_file="res://Models/OBJECTS/9mm_Box.glb"
-dest_files=["res://.godot/imported/9mm_Box.glb-9d1be7eb5ecec4152eefaf86b645476f.scn"]
+source_file="res://Models/OBJECTS/9mmbox.glb"
+dest_files=["res://.godot/imported/9mmbox.glb-61582a11e650b4eea1c36418707ac25c.scn"]
 
 [params]
 

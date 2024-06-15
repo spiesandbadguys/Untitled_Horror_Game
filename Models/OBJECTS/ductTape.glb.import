@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://ctdovif8mjsnd"
-path="res://.godot/imported/key_Silver.glb-2366a022921cfeb162bb7e8da57f21f2.scn"
+uid="uid://baxenvjt53jtv"
+path="res://.godot/imported/ductTape.glb-0680841d3590a6b357b1f39d8fb5e6d5.scn"
 
 [deps]
 
-source_file="res://Models/OBJECTS/key_Silver.glb"
-dest_files=["res://.godot/imported/key_Silver.glb-2366a022921cfeb162bb7e8da57f21f2.scn"]
+source_file="res://Models/OBJECTS/ductTape.glb"
+dest_files=["res://.godot/imported/ductTape.glb-0680841d3590a6b357b1f39d8fb5e6d5.scn"]
 
 [params]
 
