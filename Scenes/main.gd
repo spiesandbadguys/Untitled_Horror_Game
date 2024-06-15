@@ -22,3 +22,7 @@ func toggle_inventory_interface(external_inventory_owner = null) -> void:
 		inventory_interface.set_external_inventory(external_inventory_owner)
 	else:
 		inventory_interface.clear_external_inventory()
+
+
+func _on_inventory_interface_drop_slot_data(_slot_data):
+	pass # Replace with function body.
