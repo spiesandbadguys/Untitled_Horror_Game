@@ -1,12 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://chhxanghpm0hh"]
+[gd_scene load_steps=11 format=3 uid="uid://dmsyg7dtq6dy"]
 
-[ext_resource type="Script" path="res://Scripts/pickup.gd" id="1_lpymi"]
-[ext_resource type="Resource" uid="uid://te2vagdyrfwd" path="res://item/items/key_gold.tres" id="2_2rq7y"]
-[ext_resource type="Script" path="res://inventory/slot_data.gd" id="3_fcdck"]
+[ext_resource type="Script" path="res://Scripts/pickup.gd" id="1_2diwd"]
+[ext_resource type="Resource" uid="uid://b43buuldf6pyv" path="res://item/items/key_silver.tres" id="2_kf1mk"]
+[ext_resource type="Script" path="res://inventory/slot_data.gd" id="3_yah6u"]
 
-[sub_resource type="Resource" id="Resource_6cw8m"]
-script = ExtResource("3_fcdck")
-item_data = ExtResource("2_2rq7y")
+[sub_resource type="Resource" id="Resource_wg0yl"]
+script = ExtResource("3_yah6u")
+item_data = ExtResource("2_kf1mk")
 quantity = 1
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rtrad"]
@@ -42,7 +42,6 @@ blend_shape_mode = 0
 shadow_mesh = SubResource("ArrayMesh_n21yu")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fby21"]
-albedo_color = Color(0.907249, 0.773833, 0, 1)
 metallic = 0.78
 clearcoat_enabled = true
 
@@ -52,9 +51,9 @@ size = Vector3(2, 1, 2)
 [sub_resource type="BoxShape3D" id="BoxShape3D_wu8gu"]
 size = Vector3(1, 0.0644531, 1)
 
-[node name="Key_Gold" type="RigidBody3D"]
-script = ExtResource("1_lpymi")
-slot_data = SubResource("Resource_6cw8m")
+[node name="Key_Silver" type="RigidBody3D"]
+script = ExtResource("1_2diwd")
+slot_data = SubResource("Resource_wg0yl")
 
 [node name="mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.06337, 0, 0, 0, -0.167907, 0, 0, 0, 1, 0, 0, 0)

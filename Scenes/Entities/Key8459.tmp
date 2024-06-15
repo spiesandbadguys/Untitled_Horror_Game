@@ -1,13 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://chhxanghpm0hh"]
+[gd_scene load_steps=8 format=3 uid="uid://chhxanghpm0hh"]
 
-[ext_resource type="Script" path="res://Scripts/pickup.gd" id="1_lpymi"]
-[ext_resource type="Resource" uid="uid://te2vagdyrfwd" path="res://item/items/key_gold.tres" id="2_2rq7y"]
-[ext_resource type="Script" path="res://inventory/slot_data.gd" id="3_fcdck"]
-
-[sub_resource type="Resource" id="Resource_6cw8m"]
-script = ExtResource("3_fcdck")
-item_data = ExtResource("2_2rq7y")
-quantity = 1
+[ext_resource type="Script" path="res://Scripts/Key_Gold.gd" id="2_hwp3g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rtrad"]
 
@@ -53,8 +46,7 @@ size = Vector3(2, 1, 2)
 size = Vector3(1, 0.0644531, 1)
 
 [node name="Key_Gold" type="RigidBody3D"]
-script = ExtResource("1_lpymi")
-slot_data = SubResource("Resource_6cw8m")
+script = ExtResource("2_hwp3g")
 
 [node name="mesh" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.06337, 0, 0, 0, -0.167907, 0, 0, 0, 1, 0, 0, 0)

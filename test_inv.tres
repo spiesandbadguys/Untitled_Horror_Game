@@ -5,16 +5,16 @@
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="3_85bbw"]
 [ext_resource type="Resource" uid="uid://b43buuldf6pyv" path="res://item/items/key_silver.tres" id="4_fbxna"]
 
-[sub_resource type="Resource" id="Resource_8aupt"]
+[sub_resource type="Resource" id="Resource_rt6vt"]
 script = ExtResource("3_85bbw")
 item_data = ExtResource("2_odwtt")
-quantity = 10
+quantity = 5
 
-[sub_resource type="Resource" id="Resource_mjqdl"]
+[sub_resource type="Resource" id="Resource_p120m"]
 script = ExtResource("3_85bbw")
 item_data = ExtResource("4_fbxna")
-quantity = 10
+quantity = 5
 
 [resource]
 script = ExtResource("1_gf84p")
-slot_datas = Array[ExtResource("3_85bbw")]([SubResource("Resource_8aupt"), SubResource("Resource_mjqdl"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
+slot_datas = Array[ExtResource("3_85bbw")]([SubResource("Resource_rt6vt"), SubResource("Resource_p120m"), null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null])
