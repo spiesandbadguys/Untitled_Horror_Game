@@ -148,4 +148,7 @@ func inventoryControl():
 
 func interact():
 	if interact_ray.is_colliding():
-		print("interact with ", interact_ray.get_collider())
+		interact_ray.get_collider().player_interact()
+		velocity = zeroVector3(velocity)
+		# toggle_inventory.emit()
+		isInInventory = !isInInventory
