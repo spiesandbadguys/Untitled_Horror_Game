@@ -10,7 +10,7 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	if isIn and Input.is_action_just_pressed("interact"):
+	if isIn and Input.is_action_just_pressed("interact") and not %Player.getIsInMenu():
 		%Player.addKey()
 		queue_free()
 

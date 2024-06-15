@@ -1,8 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://bxnth7p5od8ht"]
+[gd_scene load_steps=15 format=3 uid="uid://bxnth7p5od8ht"]
 
 [ext_resource type="PackedScene" uid="uid://dnn5qyjk8kgfd" path="res://Scenes/player.tscn" id="1_ftwqa"]
 [ext_resource type="Texture2D" uid="uid://b6h7vu7rf7ib4" path="res://Textures/tex_dirt.jpg" id="2_4s704"]
 [ext_resource type="PackedScene" uid="uid://diujn31xu3v1b" path="res://Scenes/interactable_door.tscn" id="4_qma4b"]
+[ext_resource type="PackedScene" uid="uid://vuylo4jncm5a" path="res://Scenes/UI/PauseMenu.tscn" id="6_wjr8w"]
 [ext_resource type="PackedScene" uid="uid://chhxanghpm0hh" path="res://Scenes/Key_Gold.tscn" id="6_x7drs"]
 [ext_resource type="PackedScene" uid="uid://dkjqpqvyj7jtn" path="res://Scenes/Locked_Door.tscn" id="7_wrusy"]
 
@@ -171,3 +172,7 @@ shape = SubResource("BoxShape3D_ei7af")
 
 [node name="Key_Gold" parent="." instance=ExtResource("6_x7drs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 0, 2)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="CanvasLayer" instance=ExtResource("6_wjr8w")]
