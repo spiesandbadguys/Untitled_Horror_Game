@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dnn5qyjk8kgfd"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_c6agn"]
-[ext_resource type="PackedScene" path="res://Scenes/Flashlight.tscn" id="2_jf2sc"]
+[ext_resource type="PackedScene" uid="uid://doa3tkb8o7nu1" path="res://Scenes/Entities/Flashlight.tscn" id="2_jf2sc"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_1qpsn"]
 

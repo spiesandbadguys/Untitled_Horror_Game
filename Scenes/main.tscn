@@ -1,11 +1,11 @@
 [gd_scene load_steps=15 format=3 uid="uid://bxnth7p5od8ht"]
 
-[ext_resource type="PackedScene" uid="uid://dnn5qyjk8kgfd" path="res://Scenes/player.tscn" id="1_ftwqa"]
+[ext_resource type="PackedScene" uid="uid://dnn5qyjk8kgfd" path="res://Scenes/Entities/player.tscn" id="1_ftwqa"]
 [ext_resource type="Texture2D" uid="uid://b6h7vu7rf7ib4" path="res://Textures/tex_dirt.jpg" id="2_4s704"]
-[ext_resource type="PackedScene" uid="uid://diujn31xu3v1b" path="res://Scenes/interactable_door.tscn" id="4_qma4b"]
+[ext_resource type="PackedScene" uid="uid://diujn31xu3v1b" path="res://Scenes/Entities/interactable_door.tscn" id="4_qma4b"]
 [ext_resource type="PackedScene" uid="uid://vuylo4jncm5a" path="res://Scenes/UI/PauseMenu.tscn" id="6_wjr8w"]
-[ext_resource type="PackedScene" uid="uid://chhxanghpm0hh" path="res://Scenes/Key_Gold.tscn" id="6_x7drs"]
-[ext_resource type="PackedScene" uid="uid://dkjqpqvyj7jtn" path="res://Scenes/Locked_Door.tscn" id="7_wrusy"]
+[ext_resource type="PackedScene" uid="uid://chhxanghpm0hh" path="res://Scenes/Entities/Key_Gold.tscn" id="6_x7drs"]
+[ext_resource type="PackedScene" uid="uid://dkjqpqvyj7jtn" path="res://Scenes/Entities/Locked_Door.tscn" id="7_wrusy"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4kpu4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
