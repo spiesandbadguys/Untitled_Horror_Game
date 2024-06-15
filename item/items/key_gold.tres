@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://te2vagdyrfwd"]
 
-[ext_resource type="Script" path="res://item/item_data.gd" id="1_dv2lo"]
+[ext_resource type="Script" path="res://Scripts/item_data.gd" id="1_dv2lo"]
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4dnfq"]
 load_path = "res://.godot/imported/key_sprite.png-4584b9f1eaf5ca8989539f4b028ec0fa.ctex"
