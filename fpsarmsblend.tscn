@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://l5sxuw8ic7h"]
+
+[ext_resource type="PackedScene" uid="uid://b8ltqyvyhjjmm" path="res://Models/FPS_Arms/fpsarmsblend.glb" id="1_f43h8"]
+
+[node name="fpsarmsblend" instance=ExtResource("1_f43h8")]
