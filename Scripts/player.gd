@@ -3,6 +3,9 @@ signal toggle_inventory()
 @export var inventory_data: InventoryData
 @onready var interact_ray = $Pivot/Head/Camera3D/InteractRay
 
+@onready var meshDict = {"res://item/items/key_silver.tres::CompressedTexture2D_ohq77": "res://Models/Meshes/key_silver_mesh.res",
+						 "res://item/items/key_gold.tres::CompressedTexture2D_4dnfq":"res://Models/Meshes/key_gold_mesh.res"}
+
 #base function variables
 var speed = 0
 var keyCount = 0
@@ -152,3 +155,6 @@ func interact():
 		velocity = zeroVector3(velocity)
 		# toggle_inventory.emit()
 		isInInventory = !isInInventory
+
+func getMeshDict():
+	return meshDict

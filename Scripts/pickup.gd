@@ -8,7 +8,7 @@ var collision_body = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	mesh_3d.mesh = load(%Player.getMeshDict().get(slot_data.item_data.texture.resource_path))
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

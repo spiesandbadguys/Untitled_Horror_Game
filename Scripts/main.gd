@@ -3,9 +3,6 @@ extends Node
 @onready var player = %Player
 @onready var inventory_interface = $UI/InventoryInterface
 
-
-var meshDict = {"key_silver": "key_silver_mesh"}
-
 func _ready() -> void:
 	player.toggle_inventory.connect(toggle_inventory_interface)
 	inventory_interface.set_player_inventory_data(player.inventory_data)
