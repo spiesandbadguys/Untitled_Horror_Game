@@ -3,7 +3,11 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<< Updated upstream
 uid="uid://y4b8qrx4uiid"
+=======
+uid="uid://r50h4x3cps23"
+>>>>>>> Stashed changes
 path="res://.godot/imported/Duct_Tape.glb-a6a9ddeba4804dc3ecf169ad37c32cab.scn"
 
 [deps]

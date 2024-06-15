@@ -3,7 +3,11 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<< Updated upstream
 uid="uid://bmqidbyyvkp6n"
+=======
+uid="uid://bg3hmmom6yuph"
+>>>>>>> Stashed changes
 path="res://.godot/imported/key_silver.glb-ab77a4f5410592a7a43e8f2c065f0205.scn"
 
 [deps]
@@ -29,6 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
+<<<<<<< Updated upstream
 _subresources={
 "meshes": {
 "key_silver_Cube_001": {
@@ -43,5 +48,8 @@ _subresources={
 }
 }
 }
+=======
+_subresources={}
+>>>>>>> Stashed changes
 gltf/naming_version=1
 gltf/embedded_image_handling=1

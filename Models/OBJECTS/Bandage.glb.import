@@ -3,7 +3,11 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
+<<<<<<< Updated upstream
 uid="uid://to1yscb4042e"
+=======
+uid="uid://delftanu65qg"
+>>>>>>> Stashed changes
 path="res://.godot/imported/Bandage.glb-0d3587c260b4fac0bb5263e254504fc7.scn"
 
 [deps]
@@ -29,6 +33,7 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
+<<<<<<< Updated upstream
 _subresources={
 "meshes": {
 "Bandage_Cylinder_001": {
@@ -43,5 +48,8 @@ _subresources={
 }
 }
 }
+=======
+_subresources={}
+>>>>>>> Stashed changes
 gltf/naming_version=1
 gltf/embedded_image_handling=1
