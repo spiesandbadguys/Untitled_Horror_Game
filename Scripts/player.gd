@@ -18,8 +18,8 @@ var isInMenu: bool = false
 var tBob = 0.0
 
 #fov variables
-@export var baseFov = 75
-@export var fovChange = 1.5
+@export var baseFov = 90
+@export var fovChange = 1.2
 
 @onready var pivot = $Pivot
 @onready var head = $Pivot/Head

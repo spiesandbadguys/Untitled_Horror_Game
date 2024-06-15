@@ -12,7 +12,7 @@ func _unhandled_input(event):
 	
 func set_paused(value:bool) -> void:
 	_is_paused = value
-	# get_tree().paused = _is_paused
+	# get_tree().paused = _is_paused # use this if we want game to actually pause when menu is open
 	visible = _is_paused
 
 func get_paused() -> bool:
