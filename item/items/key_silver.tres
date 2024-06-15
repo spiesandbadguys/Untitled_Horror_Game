@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://b43buuldf6pyv"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://b43buuldf6pyv"]
 
 [ext_resource type="Script" path="res://Scripts/item_data.gd" id="1_o25sf"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ohq77"]
-load_path = "res://.godot/imported/key_sprite_silver.png-12220cb6caeb38126705fed5d4e280a0.ctex"
+[ext_resource type="ArrayMesh" uid="uid://rci0dymdfaq3" path="res://Models/Meshes/key_silver_mesh_old.res" id="1_s2f11"]
+[ext_resource type="Texture2D" uid="uid://ka5fgccscd1p" path="res://Sprites/SilverKeyIcon.png" id="3_poqmm"]
 
 [resource]
 script = ExtResource("1_o25sf")
 name = "Silver Key"
 description = "A silver key used to open certain locked doors."
 stackable = true
-texture = SubResource("CompressedTexture2D_ohq77")
+texture = ExtResource("3_poqmm")
+mesh = ExtResource("1_s2f11")

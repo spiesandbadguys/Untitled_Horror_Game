@@ -3,12 +3,8 @@ signal toggle_inventory()
 @export var inventory_data: InventoryData
 @onready var interact_ray = $Pivot/Head/Camera3D/InteractRay
 
-@onready var meshDict = {"res://item/items/key_silver.tres::CompressedTexture2D_ohq77": "res://Models/Meshes/key_silver_mesh.res",
-						 "res://item/items/key_gold.tres::CompressedTexture2D_4dnfq":"res://Models/Meshes/key_gold_mesh.res"}
-
 #base function variables
 var speed = 0
-var keyCount = 0
 @export var walkSpeed = 5
 @export var runSpeed = 8
 @export var gravity = 9.8
@@ -113,16 +109,22 @@ func _crouch() -> Vector3:
 	pos.x = pos.y
 	return pos
 
-func addKey():
-	keyCount+=1
-	print(keyCount)
-
 func takeKey():
-	keyCount-=1
-	print(keyCount)
+	for index in inventory_data.slot_datas.size():
+		if inventory_data.slot_datas[index]:
+			if inventory_data.slot_datas[index].item_data.name == interact_ray.get_collider().getKeyType():
+				inventory_data.slot_datas[index].quantity -= 1
+				if inventory_data.slot_datas[index].quantity < 1:
+					inventory_data.slot_datas[index] = null
+				inventory_data.inventory_updated.emit(inventory_data)
+				return
 
 func getKeyCount():
-	return keyCount
+	for index in inventory_data.slot_datas.size():
+		if inventory_data.slot_datas[index]:
+			if inventory_data.slot_datas[index].item_data.name == interact_ray.get_collider().getKeyType():
+				return inventory_data.slot_datas[index].quantity
+	return 0
 
 func getIsInMenu():
 	return isInMenu
@@ -154,7 +156,9 @@ func interact():
 		interact_ray.get_collider().player_interact()
 		velocity = zeroVector3(velocity)
 		# toggle_inventory.emit()
-		isInInventory = !isInInventory
+		if interact_ray.get_collider().is_in_group("external_inventory"):
+			isInInventory = !isInInventory
 
-func getMeshDict():
-	return meshDict
+func get_drop_position() -> Vector3:
+	var direction = -camera.global_transform.basis.z
+	return camera.global_position + direction

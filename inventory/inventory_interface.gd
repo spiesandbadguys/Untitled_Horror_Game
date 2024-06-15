@@ -3,6 +3,8 @@ extends Control
 signal drop_slot_data(slot_data: SlotData)
 
 var grabbed_slot_data: SlotData
+var grabbed_from_index: int
+var grabbed_from_inventory_data: InventoryData
 var external_inventory_owner
 
 @onready var player_inventory = $PlayerInventory
@@ -40,6 +42,8 @@ func on_inventory_interact(inventory_data: InventoryData, index: int, button: in
 	match[grabbed_slot_data, button]:
 		[null, MOUSE_BUTTON_LEFT]:
 			grabbed_slot_data = inventory_data.grab_slot_data(index)
+			grabbed_from_index = index
+			grabbed_from_inventory_data = inventory_data
 		[_, MOUSE_BUTTON_LEFT]:
 			grabbed_slot_data = inventory_data.drop_slot_data(grabbed_slot_data, index)
 		[null, MOUSE_BUTTON_RIGHT]:
@@ -65,4 +69,16 @@ func _on_gui_input(event):
 		match event.button_index:
 			MOUSE_BUTTON_LEFT:
 				drop_slot_data.emit(grabbed_slot_data)
-				print("drop data")
+				grabbed_slot_data = null
+			MOUSE_BUTTON_RIGHT:
+				drop_slot_data.emit(grabbed_slot_data.create_single_slot_data())
+				if grabbed_slot_data.quantity < 1:
+					grabbed_slot_data = null
+		
+		update_grabbed_slot()
+
+
+func _on_visibility_changed():
+	if not visible and grabbed_slot_data:
+		grabbed_slot_data = grabbed_from_inventory_data.drop_slot_data(grabbed_slot_data, grabbed_from_index)
+		update_grabbed_slot()

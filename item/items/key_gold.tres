@@ -1,13 +1,13 @@
-[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://te2vagdyrfwd"]
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://te2vagdyrfwd"]
 
-[ext_resource type="Script" path="res://Scripts/item_data.gd" id="1_dv2lo"]
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_4dnfq"]
-load_path = "res://.godot/imported/key_sprite.png-4584b9f1eaf5ca8989539f4b028ec0fa.ctex"
+[ext_resource type="ArrayMesh" uid="uid://bwgb42phbua0j" path="res://Models/Meshes/key_gold_mesh_old.res" id="1_xbdus"]
+[ext_resource type="Script" path="res://Scripts/item_data.gd" id="2_pjr14"]
+[ext_resource type="Texture2D" uid="uid://bostrs4ogl67a" path="res://Sprites/GoldKeyIcon.png" id="3_ve5ye"]
 
 [resource]
-script = ExtResource("1_dv2lo")
+script = ExtResource("2_pjr14")
 name = "Gold Key"
 description = "A gold key used to open certain locked doors."
 stackable = true
-texture = SubResource("CompressedTexture2D_4dnfq")
+texture = ExtResource("3_ve5ye")
+mesh = ExtResource("1_xbdus")

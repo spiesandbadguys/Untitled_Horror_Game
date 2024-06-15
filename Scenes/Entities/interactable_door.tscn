@@ -119,10 +119,11 @@ _data = {
 "RESET": SubResource("Animation_ur0if")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_nfru3"]
-size = Vector3(1.99741, 2.22073, 1.63977)
+[sub_resource type="BoxShape3D" id="BoxShape3D_7rsks"]
+size = Vector3(0.2, 2, 1.6)
 
-[node name="Door" type="Node3D"]
+[node name="Door" type="StaticBody3D"]
+collision_layer = 5
 script = ExtResource("1_27ynq")
 
 [node name="Door_Frame_mesh" type="MeshInstance3D" parent="."]
@@ -143,11 +144,6 @@ libraries = {
 "": SubResource("AnimationLibrary_txdqp")
 }
 
-[node name="Interact_Area" type="Area3D" parent="."]
-
-[node name="Collision_Detection" type="CollisionShape3D" parent="Interact_Area"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00361633, 1.11723, -0.717224)
-shape = SubResource("BoxShape3D_nfru3")
-
-[connection signal="body_entered" from="Interact_Area" to="." method="_on_interact_area_body_entered"]
-[connection signal="body_exited" from="Interact_Area" to="." method="_on_interact_area_body_exited"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0924113, 1.09018, -0.727726)
+shape = SubResource("BoxShape3D_7rsks")

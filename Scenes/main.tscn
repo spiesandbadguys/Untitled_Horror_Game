@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://bxnth7p5od8ht"]
+[gd_scene load_steps=31 format=3 uid="uid://bxnth7p5od8ht"]
 
 [ext_resource type="PackedScene" uid="uid://dnn5qyjk8kgfd" path="res://Scenes/Entities/player.tscn" id="1_ftwqa"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_v0442"]
@@ -15,6 +15,7 @@
 [ext_resource type="Resource" uid="uid://te2vagdyrfwd" path="res://item/items/key_gold.tres" id="14_hihg3"]
 [ext_resource type="Script" path="res://inventory/slot_data.gd" id="15_3boce"]
 [ext_resource type="Resource" uid="uid://b43buuldf6pyv" path="res://item/items/key_silver.tres" id="16_bydgq"]
+[ext_resource type="Resource" uid="uid://dw36yucdi8ewa" path="res://item/items/bandage.tres" id="16_hmf56"]
 [ext_resource type="PackedScene" uid="uid://brleibdqlso8d" path="res://Scenes/Entities/general_pickup.tscn" id="16_md77t"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4kpu4"]
@@ -58,9 +59,14 @@ script = ExtResource("15_3boce")
 item_data = ExtResource("16_bydgq")
 quantity = 2
 
+[sub_resource type="Resource" id="Resource_tsaa3"]
+script = ExtResource("15_3boce")
+item_data = ExtResource("16_hmf56")
+quantity = 5
+
 [sub_resource type="Resource" id="Resource_iutgk"]
 script = ExtResource("13_sqod8")
-slot_datas = Array[ExtResource("15_3boce")]([SubResource("Resource_nm8ug"), SubResource("Resource_1xey0"), null, null, null])
+slot_datas = Array[ExtResource("15_3boce")]([SubResource("Resource_nm8ug"), SubResource("Resource_1xey0"), SubResource("Resource_tsaa3"), null, null])
 
 [sub_resource type="Resource" id="Resource_6q3sn"]
 script = ExtResource("15_3boce")
@@ -93,9 +99,11 @@ surface_material_override/0 = SubResource("StandardMaterial3D_nrcxy")
 
 [node name="Locked_door" parent="doorContainer" instance=ExtResource("7_wrusy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.35989, -0.00699258, 14.6296)
+keyType = "Gold Key"
 
 [node name="Locked_door2" parent="doorContainer" instance=ExtResource("7_wrusy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.36582, -0.0069921, 16.9887)
+keyType = "Silver Key"
 
 [node name="Door" parent="doorContainer" instance=ExtResource("4_qma4b")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.26686, 0, 10.9489)
@@ -251,3 +259,4 @@ slot_data = SubResource("Resource_6q3sn")
 
 [connection signal="drop_slot_data" from="UI/InventoryInterface" to="." method="_on_inventory_interface_drop_slot_data"]
 [connection signal="gui_input" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_gui_input"]
+[connection signal="visibility_changed" from="UI/InventoryInterface" to="UI/InventoryInterface" method="_on_visibility_changed"]

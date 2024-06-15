@@ -1,5 +1,7 @@
 extends Node
 
+const pickup = preload("res://Scenes/Entities/general_pickup.tscn")
+
 @onready var player = %Player
 @onready var inventory_interface = $UI/InventoryInterface
 
@@ -24,5 +26,8 @@ func toggle_inventory_interface(external_inventory_owner = null) -> void:
 		inventory_interface.clear_external_inventory()
 
 
-func _on_inventory_interface_drop_slot_data(_slot_data):
-	pass # Replace with function body.
+func _on_inventory_interface_drop_slot_data(slot_data):
+	var pick_up = pickup.instantiate()
+	pick_up.slot_data = slot_data
+	pick_up.position = player.get_drop_position()
+	add_child(pick_up)

@@ -25,6 +25,9 @@ transform = Transform3D(0.0234028, 0, -0.999726, 0, 1, 0, 0.999726, 0, 0.0234028
 target_position = Vector3(0, 0, -2.5)
 collision_mask = 4
 
+[node name="dropPoint" type="Node3D" parent="Pivot/Head/Camera3D/InteractRay"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.00508821, -2.48897)
+
 [node name="Player_Body" type="MeshInstance3D" parent="Pivot"]
 mesh = SubResource("CapsuleMesh_1qpsn")
 
