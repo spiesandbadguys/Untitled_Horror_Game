@@ -21,8 +21,26 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.564989, 0)
 [node name="Flashlight" parent="Pivot/Head/Camera3D" instance=ExtResource("2_jf2sc")]
 transform = Transform3D(0.0234028, 0, -0.999726, 0, 1, 0, 0.999726, 0, 0.0234028, 0.3375, -0.323614, -0.47248)
 
+[node name="InteractRay" type="RayCast3D" parent="Pivot/Head/Camera3D"]
+target_position = Vector3(0, 0, -2.5)
+collision_mask = 4
+
 [node name="Player_Body" type="MeshInstance3D" parent="Pivot"]
 mesh = SubResource("CapsuleMesh_1qpsn")
 
 [node name="Player_Collision" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_wowqi")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 2.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2

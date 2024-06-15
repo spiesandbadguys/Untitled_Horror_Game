@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://bxnth7p5od8ht"]
+[gd_scene load_steps=21 format=3 uid="uid://bxnth7p5od8ht"]
 
 [ext_resource type="PackedScene" uid="uid://dnn5qyjk8kgfd" path="res://Scenes/Entities/player.tscn" id="1_ftwqa"]
 [ext_resource type="Script" path="res://Scenes/main.gd" id="1_v0442"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dajg2vdfix8t5" path="res://inventory/inventory.tscn" id="7_wfpn4"]
 [ext_resource type="PackedScene" uid="uid://dkjqpqvyj7jtn" path="res://Scenes/Entities/Locked_Door.tscn" id="7_wrusy"]
 [ext_resource type="Script" path="res://inventory/inventory_interface.gd" id="9_0u50d"]
+[ext_resource type="PackedScene" uid="uid://dku6wd76vs8n8" path="res://inventory/slot.tscn" id="11_gbxen"]
+[ext_resource type="PackedScene" uid="uid://v67ykiq8tobj" path="res://Scenes/Entities/chest.tscn" id="12_dsubn"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4kpu4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -199,3 +201,14 @@ offset_left = 50.0
 offset_top = 50.0
 offset_right = 90.0
 offset_bottom = 90.0
+
+[node name="GrabbedSlot" parent="UI/InventoryInterface" instance=ExtResource("11_gbxen")]
+visible = false
+modulate = Color(1, 1, 1, 0.498039)
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 64.0
+offset_bottom = 64.0
+
+[node name="Chest" parent="." instance=ExtResource("12_dsubn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3, 0, 0)

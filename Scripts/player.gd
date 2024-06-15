@@ -1,6 +1,7 @@
 extends CharacterBody3D
 signal toggle_inventory()
 @export var inventory_data: InventoryData
+@onready var interact_ray = $Pivot/Head/Camera3D/InteractRay
 
 #base function variables
 var speed = 0
@@ -39,6 +40,8 @@ func _unhandled_input(event):
 			camera.rotation.x = clamp(camera.rotation.x, deg_to_rad(-80), deg_to_rad(60))
 	if Input.is_action_just_pressed("inventory") and not isInMenu:
 		inventoryControl()
+	if Input.is_action_just_pressed("interact"):
+		interact()
 		
 func _physics_process(delta):
 	#add gravity
@@ -142,3 +145,7 @@ func inventoryControl():
 	velocity = zeroVector3(velocity)
 	toggle_inventory.emit()
 	isInInventory = !isInInventory
+
+func interact():
+	if interact_ray.is_colliding():
+		print("interact with ", interact_ray.get_collider())
