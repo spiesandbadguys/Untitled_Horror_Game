@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemDataConsumable" load_steps=4 format=3 uid="uid://cmwydatc4kfcc"]
+
+[ext_resource type="ArrayMesh" uid="uid://ddhg6at04vri7" path="res://Models/Meshes/syringe_mesh.res" id="1_i3484"]
+[ext_resource type="Script" path="res://Scripts/inventory/item_data_consumable.gd" id="1_svy2f"]
+[ext_resource type="Texture2D" uid="uid://c2or13oh70p4p" path="res://Sprites/syringeicon.png" id="3_8ly82"]
+
+[resource]
+script = ExtResource("1_svy2f")
+heal_value = 2
+name = "Syringe"
+description = "Hypodermic syringe that gives greater healing than a bandage"
+stackable = true
+texture = ExtResource("3_8ly82")
+mesh = ExtResource("1_i3484")

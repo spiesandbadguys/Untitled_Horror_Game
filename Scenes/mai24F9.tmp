@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://bxnth7p5od8ht"]
+[gd_scene load_steps=38 format=3 uid="uid://bxnth7p5od8ht"]
 
 [ext_resource type="PackedScene" uid="uid://dnn5qyjk8kgfd" path="res://Scenes/Entities/player.tscn" id="1_ftwqa"]
 [ext_resource type="Script" path="res://Scripts/main.gd" id="1_v0442"]
@@ -21,7 +21,6 @@
 [ext_resource type="Resource" uid="uid://dw36yucdi8ewa" path="res://items/bandage.tres" id="16_hmf56"]
 [ext_resource type="PackedScene" uid="uid://brleibdqlso8d" path="res://Scenes/Entities/general_pickup.tscn" id="16_md77t"]
 [ext_resource type="Resource" uid="uid://cmwydatc4kfcc" path="res://items/syringe.tres" id="20_47hx4"]
-[ext_resource type="Resource" uid="uid://dmow1nhkcxv0s" path="res://items/ducttape.tres" id="21_1hwc7"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_4kpu4"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -82,14 +81,9 @@ script = ExtResource("15_3boce")
 item_data = ExtResource("20_47hx4")
 quantity = 5
 
-[sub_resource type="Resource" id="Resource_g4q88"]
-script = ExtResource("15_3boce")
-item_data = ExtResource("21_1hwc7")
-quantity = 10
-
 [sub_resource type="Resource" id="Resource_iutgk"]
 script = ExtResource("13_sqod8")
-slot_datas = Array[ExtResource("15_3boce")]([SubResource("Resource_nm8ug"), SubResource("Resource_1xey0"), SubResource("Resource_tsaa3"), SubResource("Resource_5oj1k"), SubResource("Resource_g4q88"), null, null, null, null, null, null, null])
+slot_datas = Array[ExtResource("15_3boce")]([SubResource("Resource_nm8ug"), SubResource("Resource_1xey0"), SubResource("Resource_tsaa3"), SubResource("Resource_5oj1k"), null, null, null, null, null, null, null, null])
 
 [sub_resource type="Resource" id="Resource_6q3sn"]
 script = ExtResource("15_3boce")

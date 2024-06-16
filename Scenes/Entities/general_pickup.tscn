@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=3 uid="uid://brleibdqlso8d"]
 
-[ext_resource type="Script" path="res://Scripts/inventory/pickup.gd" id="1_7e4gh"]
+[ext_resource type="Script" path="res://Scripts/inventory/pickup.gd" id="1_agjj8"]
 [ext_resource type="Resource" uid="uid://te2vagdyrfwd" path="res://items/key_gold.tres" id="2_w18b6"]
-[ext_resource type="Script" path="res://Scripts/inventory/slot_data.gd" id="3_0lrar"]
+[ext_resource type="Script" path="res://Scripts/inventory/slot_data.gd" id="3_uaekq"]
 
 [sub_resource type="Resource" id="Resource_6cw8m"]
-script = ExtResource("3_0lrar")
+script = ExtResource("3_uaekq")
 item_data = ExtResource("2_w18b6")
 quantity = 1
 
@@ -80,7 +80,7 @@ shadow_mesh = SubResource("ArrayMesh_vyaco")
 
 [node name="pickup" type="RigidBody3D"]
 collision_layer = 5
-script = ExtResource("1_7e4gh")
+script = ExtResource("1_agjj8")
 slot_data = SubResource("Resource_6cw8m")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

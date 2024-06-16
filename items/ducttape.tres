@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://dmow1nhkcxv0s"]
+
+[ext_resource type="ArrayMesh" uid="uid://b8lv3p7ou2xma" path="res://Models/Meshes/ducttape_mesh.res" id="1_dyy4s"]
+[ext_resource type="Script" path="res://Scripts/inventory/item_data.gd" id="1_v0tc8"]
+[ext_resource type="Texture2D" uid="uid://cfjkmo805mfg5" path="res://Sprites/DuctTapeIcon.png" id="3_h2ngm"]
+
+[resource]
+script = ExtResource("1_v0tc8")
+name = "Duct Tape"
+description = "A roll of duct tape that can be used to craft items"
+stackable = true
+texture = ExtResource("3_h2ngm")
+mesh = ExtResource("1_dyy4s")
