@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="InventoryData" load_steps=15 format=3 uid="uid://dm25plx25wylk"]
+
+[ext_resource type="Script" path="res://Scripts/inventory/inventory_data.gd" id="1_gf84p"]
+[ext_resource type="Resource" uid="uid://te2vagdyrfwd" path="res://items/key_gold.tres" id="2_odwtt"]
+[ext_resource type="Script" path="res://Scripts/inventory/slot_data.gd" id="3_85bbw"]
+[ext_resource type="Resource" uid="uid://b43buuldf6pyv" path="res://items/key_silver.tres" id="4_fbxna"]
+[ext_resource type="Resource" uid="uid://dw36yucdi8ewa" path="res://items/bandage.tres" id="5_3n1d5"]
+[ext_resource type="Resource" uid="uid://dj5h8mgh5ywp2" path="res://items/9mmbox.tres" id="6_ckigb"]
+[ext_resource type="Resource" uid="uid://l5tyoxwmwuql" path="res://items/cloth_head_armor.tres" id="7_ww42f"]
+[ext_resource type="Resource" uid="uid://c2ls38gevgy0p" path="res://items/glock.tres" id="8_dpvgt"]
+
+[sub_resource type="Resource" id="Resource_rt6vt"]
+script = ExtResource("3_85bbw")
+item_data = ExtResource("2_odwtt")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_p120m"]
+script = ExtResource("3_85bbw")
+item_data = ExtResource("4_fbxna")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_qgp47"]
+script = ExtResource("3_85bbw")
+item_data = ExtResource("5_3n1d5")
+quantity = 2
+
+[sub_resource type="Resource" id="Resource_50r0h"]
+script = ExtResource("3_85bbw")
+item_data = ExtResource("6_ckigb")
+quantity = 5
+
+[sub_resource type="Resource" id="Resource_3a7fx"]
+script = ExtResource("3_85bbw")
+item_data = ExtResource("7_ww42f")
+quantity = 1
+
+[sub_resource type="Resource" id="Resource_davna"]
+script = ExtResource("3_85bbw")
+item_data = ExtResource("8_dpvgt")
+quantity = 1
+
+[resource]
+script = ExtResource("1_gf84p")
+slot_datas = Array[ExtResource("3_85bbw")]([SubResource("Resource_rt6vt"), SubResource("Resource_p120m"), SubResource("Resource_qgp47"), SubResource("Resource_50r0h"), SubResource("Resource_3a7fx"), SubResource("Resource_davna"), null, null, null, SubResource("Resource_davna"), null, null])

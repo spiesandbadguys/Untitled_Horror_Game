@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmead2ekklq32"]
+
+[ext_resource type="PackedScene" uid="uid://ciesoroey5en6" path="res://Models/FPS_Arms/FPS_Character_Model.glb" id="1_iwbpi"]
+
+[node name="FPS_Character_Model" instance=ExtResource("1_iwbpi")]
+
+[node name="Ejector_Shape" parent="." index="3"]
+visible = false
+
+[node name="Magazine_Shape" parent="." index="4"]
+visible = false
+
+[node name="Main_Shape" parent="." index="5"]
+visible = false
+
+[node name="Slide_Shape" parent="." index="6"]
+visible = false
+
+[node name="Trigger_Shape" parent="." index="7"]
+visible = false
+
+[node name="Sphere_Shape" parent="." index="8"]
+visible = false
+
+[node name="Cube_Shape" parent="." index="9"]
+visible = false
+
+[node name="Cube_Shape2" parent="." index="10"]
+visible = false
+
+[node name="Cube_Shape3" parent="." index="11"]
+visible = false
+
+[node name="Ejector_Shape_001" parent="." index="12"]
+visible = false
+
+[node name="Magazine_Shape_001" parent="." index="13"]
+visible = false
+
+[node name="Main_Shape_001" parent="." index="14"]
+visible = false
+
+[node name="Slide_Shape_001" parent="." index="15"]
+visible = false
+
+[node name="Trigger_Shape_001" parent="." index="16"]
+visible = false
+
+[node name="Casing_custom_Shape" parent="." index="17"]
+visible = false
+
+[node name="Casing_custom_Shape_001" parent="." index="18"]
+visible = false
