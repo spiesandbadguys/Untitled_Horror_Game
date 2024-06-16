@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemDataWeapon" load_steps=4 format=3 uid="uid://c2ls38gevgy0p"]
+
+[ext_resource type="Script" path="res://Scripts/item_data_weapon.gd" id="1_asha6"]
+[ext_resource type="ArrayMesh" uid="uid://dg03psctqxyh8" path="res://Models/Meshes/Flashlight_Cylinder.res" id="1_f7rf7"]
+[ext_resource type="Texture2D" uid="uid://v8q3gm4j336j" path="res://Sprites/glock_placeholder.png" id="3_tejd2"]
+
+[resource]
+script = ExtResource("1_asha6")
+name = "Glock"
+description = "Goes pew pew"
+stackable = false
+texture = ExtResource("3_tejd2")
+mesh = ExtResource("1_f7rf7")

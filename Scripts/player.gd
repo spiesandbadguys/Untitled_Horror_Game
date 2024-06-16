@@ -1,7 +1,11 @@
 extends CharacterBody3D
 signal toggle_inventory()
 @export var inventory_data: InventoryData
+@export var equip_inventory_data: InventoryDataEquip
+@export var weapon_inventory_data: InventoryDataWeapon
+
 @onready var interact_ray = $Pivot/Head/Camera3D/InteractRay
+var health: int = 5
 
 #base function variables
 var speed = 0
@@ -29,6 +33,7 @@ var tBob = 0.0
 @onready var camera = $Pivot/Head/Camera3D
 
 func _ready():
+	PlayerManager.player = self
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _unhandled_input(event):
@@ -48,11 +53,11 @@ func _physics_process(delta):
 		velocity.y -= gravity * delta
 			
 	#jump
-	if Input.is_action_just_pressed("jump") and is_on_floor() and not isCrouching and not isInMenu and not isInInventory:
+	if Input.is_action_just_pressed("jump") and is_on_floor() and not isCrouching and not isInMenu:
 		velocity.y = jumpVelocity
 		
 	#sprint and sprint
-	if Input.is_action_pressed("sprint") or Input.is_action_pressed("crouch") and not isInMenu and not isInInventory:
+	if Input.is_action_pressed("sprint") or Input.is_action_pressed("crouch") and not isInMenu:
 		if Input.is_action_pressed("sprint"):
 			speed = runSpeed
 		elif Input.is_action_pressed("crouch"):
@@ -66,7 +71,7 @@ func _physics_process(delta):
 	else:
 		speed = walkSpeed
 	
-	if Input.is_action_just_released("crouch") and not isInMenu and not isInInventory:
+	if Input.is_action_just_released("crouch") and not isInMenu:
 		$Pivot.translate(Vector3(0, 0.5, 0))
 		speed = walkSpeed
 		isCrouching = false
@@ -76,7 +81,7 @@ func _physics_process(delta):
 	#get input direction for movement
 	var inputDir = Input.get_vector("left", "right", "forward", "backward")
 	var direction = (head.transform.basis * Vector3(inputDir.x, 0, inputDir.y)).normalized()
-	if is_on_floor() and not isInMenu and not isInInventory:
+	if is_on_floor() and not isInMenu:
 		if direction:
 			#velocity.x = direction.x * speed
 			#velocity.z = direction.z * speed
@@ -136,9 +141,8 @@ func setIsInMenu(inMenu:bool):
 func getIsInInventory():
 	return isInInventory
 
-func setIsInInventory(inMenu:bool):
-	velocity = zeroVector3(velocity)
-	isInInventory = inMenu
+func setIsInInventory(inInventory:bool):
+	isInInventory = inInventory
 
 func zeroVector3(v):
 	v.x = 0
@@ -147,7 +151,6 @@ func zeroVector3(v):
 	return v
 
 func inventoryControl():
-	velocity = zeroVector3(velocity)
 	toggle_inventory.emit()
 	isInInventory = !isInInventory
 
@@ -162,3 +165,6 @@ func interact():
 func get_drop_position() -> Vector3:
 	var direction = -camera.global_transform.basis.z
 	return camera.global_position + direction
+
+func heal(heal_value: int) -> void:
+	health+=heal_value

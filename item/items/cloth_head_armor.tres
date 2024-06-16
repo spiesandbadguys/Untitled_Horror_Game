@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemDataEquip" load_steps=4 format=3 uid="uid://l5tyoxwmwuql"]
+
+[ext_resource type="Script" path="res://Scripts/item_data_equip.gd" id="1_nhvin"]
+[ext_resource type="ArrayMesh" uid="uid://dg03psctqxyh8" path="res://Models/Meshes/Flashlight_Cylinder.res" id="1_vkbmf"]
+[ext_resource type="Texture2D" uid="uid://k4vtu1pvurus" path="res://Sprites/helmet_placeholder.png" id="3_dpyw5"]
+
+[resource]
+script = ExtResource("1_nhvin")
+defence = 1
+name = "Cloth Head"
+description = "A piece of cloth headgear"
+stackable = false
+texture = ExtResource("3_dpyw5")
+mesh = ExtResource("1_vkbmf")

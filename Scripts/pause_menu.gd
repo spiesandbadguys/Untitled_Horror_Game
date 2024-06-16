@@ -8,10 +8,10 @@ func _unhandled_input(event):
 		_is_paused = !_is_paused
 		%Player.setIsInMenu(true)
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	if event.is_action_pressed("Menu") and not %Player.getIsInMenu() and %Player.getIsInInventory():
-		_is_paused = !_is_paused
-		%Player.setIsInMenu(true)
+	elif event.is_action_pressed("Menu") and not %Player.getIsInMenu() and %Player.getIsInInventory():
 		%Player.inventoryControl()
+		%Player.setIsInMenu(true)
+		_is_paused = !_is_paused
 		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	
 	

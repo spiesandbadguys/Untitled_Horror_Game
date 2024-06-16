@@ -6,5 +6,5 @@ class_name ItemData
 @export var texture: Texture
 @export var mesh: Mesh
 
-func use(target) -> void:
+func use(_target) -> void:
 	pass

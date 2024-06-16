@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ctdovif8mjsnd"
-path="res://.godot/imported/key_Silver.glb-2366a022921cfeb162bb7e8da57f21f2.scn"
+path="res://.godot/imported/key_silver.glb-ab77a4f5410592a7a43e8f2c065f0205.scn"
 
 [deps]
 
-source_file="res://Models/OBJECTS/key_Silver.glb"
-dest_files=["res://.godot/imported/key_Silver.glb-2366a022921cfeb162bb7e8da57f21f2.scn"]
+source_file="res://Models/OBJECTS/key_silver.glb"
+dest_files=["res://.godot/imported/key_silver.glb-ab77a4f5410592a7a43e8f2c065f0205.scn"]
 
 [params]
 
@@ -29,6 +29,19 @@ animation/fps=30
 animation/trimming=false
 animation/remove_immutable_tracks=true
 import_script/path=""
-_subresources={}
+_subresources={
+"meshes": {
+"key_silver_Cube_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/make_streamable": "",
+"save_to_file/path": "res://Models/Meshes/key_silver_Cube_001.res"
+}
+}
+}
 gltf/naming_version=1
 gltf/embedded_image_handling=1
