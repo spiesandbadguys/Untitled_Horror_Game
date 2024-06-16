@@ -56,7 +56,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor() and not isCrouching and not isInMenu:
 		velocity.y = jumpVelocity
 		
-	#sprint and sprint
+	#sprint 
 	if Input.is_action_pressed("sprint") or Input.is_action_pressed("crouch") and not isInMenu:
 		if Input.is_action_pressed("sprint"):
 			speed = runSpeed
