@@ -4,12 +4,21 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://ctdovif8mjsnd"
+<<<<<<< Updated upstream
 path="res://.godot/imported/key_silver.glb-ab77a4f5410592a7a43e8f2c065f0205.scn"
 
 [deps]
 
 source_file="res://Models/OBJECTS/key_silver.glb"
 dest_files=["res://.godot/imported/key_silver.glb-ab77a4f5410592a7a43e8f2c065f0205.scn"]
+=======
+path="res://.godot/imported/key_Silver.glb-2366a022921cfeb162bb7e8da57f21f2.scn"
+
+[deps]
+
+source_file="res://Models/OBJECTS/key_Silver.glb"
+dest_files=["res://.godot/imported/key_Silver.glb-2366a022921cfeb162bb7e8da57f21f2.scn"]
+>>>>>>> Stashed changes
 
 [params]
 

@@ -4,12 +4,21 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cwherhqla2ay3"
+<<<<<<< Updated upstream
 path="res://.godot/imported/Bandage.glb-0d3587c260b4fac0bb5263e254504fc7.scn"
 
 [deps]
 
 source_file="res://Models/OBJECTS/Bandage.glb"
 dest_files=["res://.godot/imported/Bandage.glb-0d3587c260b4fac0bb5263e254504fc7.scn"]
+=======
+path="res://.godot/imported/bandage.glb-b1675096935769b4c02bd10439173aec.scn"
+
+[deps]
+
+source_file="res://Models/OBJECTS/bandage.glb"
+dest_files=["res://.godot/imported/bandage.glb-b1675096935769b4c02bd10439173aec.scn"]
+>>>>>>> Stashed changes
 
 [params]
 
